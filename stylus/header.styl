@@ -1,0 +1,115 @@
+$main-color = #f39f18
+$headers-color = #2c3949
+
+$base_font_size = 15
+
+$base_font_size_ems = unit($base_font_size / 15, em)
+
+$px = unit(1 / $base_font_size, rem)
+
+$px_em = unit(1 / $base_font_size, em)
+
+body
+  font-size: 15px
+  min-width: 320px
+  position: relative
+  line-height: 22 * $px_em
+  font-family: "RobotoBold", sans-serif
+  overflow-x: hidden
+  color: #333
+  
+
+.hidden
+  display: none
+  
+a, a:hover, a:focus, a:active
+  color: $main-color
+  text-decoration: underline
+
+.headers
+  font-family "PFCentroSlabProMedium", sans-serif
+  text-transform: uppercase
+  font-weight: normal
+  color $headers-color
+
+h1,h2,h3,h4,h5,h6
+  @extend .headers
+  
+h1
+  font-size: 48 * $px_em;
+h2
+  font-size: 30 * $px_em;
+h3
+  font-size: 24 *$px_em;
+
+b, strong
+  font-family: "RalewayBold", sans-serif;
+
+.before
+  content ''
+  width: 100%
+  height 100%
+  position absolute
+  left:0
+  top: 0
+
+.ulmnu
+  list-style none
+  margin 0
+  padding 0
+  li
+    display inline-block
+
+
+.main-head
+  h1
+    text-transform: none;
+  min-height 620px
+  -webkit-background-size: cover
+  background-size: cover
+  background-position: center;
+  position relative
+  &::before
+    @extend .before
+    background-color: #394b5f;
+    opacity .85
+    
+  .top-line
+    min-height: 160px
+    background-image: url(../img/top_gradient.png)
+    background-repeat repeat-x
+    padding-top: 45px;
+
+  .logo
+    opacity .95
+    img
+      width 100px
+
+  .main-mnu
+    font-size: 14 * $px_em
+    li
+      line-height 48px
+      padding: 0 10px
+      &.active
+        a
+          color: $main-color;
+          text-decoration: underline
+      a:hover
+        color: $main-color;
+        text-decoration: underline
+
+
+
+    ul  
+      @extend .ulmnu
+    a
+      text-decoration: none
+      color white
+
+
+.phone
+  opacity: .9
+  color white
+  font-family: RobotoBold, sans-serif
+  font-size: 19 * $px_em;
+  line-height: 48px
