@@ -1,8 +1,29 @@
+.trans
+  transition: all .5s ease
 
 @media only screen and (max-width : 1200px)
-  div
-    background-color: red;
+  .main-head
+    .main-mnu
+      display none
+      min-width: 290px
+      float: right
+      text-align: right
+      background-color: #1c242c;
+      margin-top: 10px;
+      ul
+        li
+          display: block
+          padding: 0
+          a
+            font-size: 19px;
+            display: block
+            padding 0 20px
+            @extend .trans
+            &:hover
+              background-color: #273646;
 
+    .phone
+      padding-right: 60px
 
 
 //@media only screen and (max-width : 992px)
@@ -35,10 +56,18 @@
 //
 //
 ///* Extra Small Devices, Phones */
-//@media only screen and (max-width : 480px)
-///**/
-//
-//
+@media only screen and (max-width : 480px)
+  .phone-wrap
+    .phone
+      font-size: 16px
+      line-height: 34px
+    .toggle-mnu
+      line-height: 34px
+      padding-top: 15px
+  .main-head
+    .logo
+      img
+        width 70px
 ///* Custom, iPhone Retina */
 //@media only screen and (max-width : 320px)
 ///**/
@@ -67,5 +96,6 @@
 //
 //
 ///* Large Devices, Wide Screens */
-//@media only screen and (min-width : 1200px)
-///**/
+@media only screen and (min-width : 1200px)
+  .main-mnu
+    display: block !important

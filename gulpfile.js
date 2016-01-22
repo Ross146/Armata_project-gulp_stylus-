@@ -12,7 +12,8 @@ var gulp = require('gulp'),
 gulp.task('connect', function() {
   connect.server({
     root: ['./app'],
-    livereload: true
+    livereload: true,
+    port: 8888
   });
 });
 
@@ -41,6 +42,7 @@ gulp.task('stylus', function() {
 // watch
 gulp.task('watch', function() {
   gulp.watch('./stylus/*.styl', ['stylus']);
+  gulp.watch('./stylus/import/*.styl', ['stylus']);
   gulp.watch('./app/index.html', ['reload']);
   gulp.watch('./app/css/*.css', ['reload']);
 })

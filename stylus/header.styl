@@ -1,3 +1,5 @@
+@import "nib";
+
 $main-color = #f39f18
 $headers-color = #2c3949
 
@@ -53,6 +55,9 @@ b, strong
   left:0
   top: 0
 
+.trans
+  transition: all .5s ease
+
 .ulmnu
   list-style none
   margin 0
@@ -86,10 +91,11 @@ b, strong
       width 100px
 
   .main-mnu
+    font-family: RalewayRegular,sans-serif
     font-size: 14 * $px_em
     li
       line-height 48px
-      padding: 0 10px
+      padding: 0 10px;
       &.active
         a
           color: $main-color;
@@ -106,10 +112,53 @@ b, strong
       text-decoration: none
       color white
 
+.phone-wrap
+  position relative
+  .phone
+    opacity: .9
+    color white
+    font-family: RobotoBold, sans-serif
+    font-size: 19 * $px_em;
+    line-height: 48px
+    text-align: right
+    white-space: nowrap
+  .toggle-mnu
+    position absolute
+    top 0
+    right 0
+    display: block
+    width: 28px
+    height: 28px
+    padding-top: 20px
 
-.phone
-  opacity: .9
-  color white
-  font-family: RobotoBold, sans-serif
-  font-size: 19 * $px_em;
-  line-height: 48px
+  .toggle-mnu span:after,
+  .toggle-mnu span:before
+    content: ""
+    position: absolute
+    left: 0
+    top: -9px
+
+  .toggle-mnu span:after
+    top: 9px
+
+  .toggle-mnu span
+    position: relative
+    display: block
+
+  .toggle-mnu span,
+  .toggle-mnu span:after,
+  .toggle-mnu span:before
+    width: 100%
+    height: 2px
+    background-color: white
+    border-radius: 2px
+    transition: all 0.3s
+
+  .toggle-mnu.on span
+    background-color: transparent
+
+  .toggle-mnu.on span:before
+    transform: rotate(45deg) translate(5px, 5px)
+
+  .toggle-mnu.on span:after
+    transform: rotate(-45deg) translate(7px, -8px)
