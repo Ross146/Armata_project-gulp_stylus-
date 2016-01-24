@@ -8,8 +8,11 @@
       min-width: 290px
       float: right
       text-align: right
-      background-color: #1c242c;
-      margin-top: 10px;
+      background-color: #1c242c
+      margin-top: 10px
+      position absolute
+      right 15px
+      z-index 2
       ul
         li
           display: block
@@ -26,13 +29,17 @@
       padding-right: 60px
 
 
-//@media only screen and (max-width : 992px)
-
+@media only screen and (max-width : 992px)
+  .header-wrap
+    h1
+      margin-top: 0
 
 
 /* Small Devices, Tablets */
 @media only screen and (max-width : 768px)
-
+  .main-head
+    .main-mnu
+      top: 35px
   /*Disable Animation on Mobile Devices*/
   .animated
     /*CSS transitions*/
