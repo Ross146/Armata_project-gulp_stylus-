@@ -1,15 +1,5 @@
 @import "nib";
-
-$main-color = #f39f18
-$headers-color = #2c3949
-
-$base_font_size = 15
-
-$base_font_size_ems = unit($base_font_size / 15, em)
-
-$px = unit(1 / $base_font_size, rem)
-
-$px_em = unit(1 / $base_font_size, em)
+@import "/import/_var.styl";
 
 body
   font-size: 15px
@@ -36,6 +26,7 @@ a, a:hover, a:focus, a:active
 
 h1,h2,h3,h4,h5,h6
   @extend .headers
+  line-height 22* $px_em;
   
 h1
   font-size: 48 * $px_em;
@@ -46,7 +37,7 @@ h3
 
 b, strong
   font-family: "RalewayBold", sans-serif;
-
+  font-weight: normal;
 .before
   content ''
   width: 100%
@@ -256,10 +247,17 @@ b, strong
   padding 12px 25px
   border-bottom: 3px solid #B97200
   transition .5s all ease
-  &:hover
+  text-decoration: none
+  &:hover,
+  &:active,
+  &:focus
     background-color: #FFB338
-  &:active
+    text-decoration: none
+    color black
+  &:active,
+  &:focus
     background-color: #DB8C0E
+
 
 .arrow-bottom
   display inline-block

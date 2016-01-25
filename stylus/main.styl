@@ -1,4 +1,5 @@
 @import "nib";
+@import "/import/_var.styl";
 
 *::-webkit-input-placeholder
   color: #fff
@@ -9,7 +10,7 @@
   opacity: 1
 
 *::-moz-placeholder
-  color: #666
+  color: #fff
   opacity: 1
 
 *:-ms-input-placeholder
@@ -24,7 +25,55 @@ body textarea:required:valid
   color: #fff
 
 //Custom Styles Here
+.homesect
+  padding-top: 70px
+  background-color: #f9f9f9
+  font-family: RalewayRegular, sans-serif
+  position: relative
+  .section-head
+    margin-bottom: 80px
+    a
+      font-family: RalewayBold, sans-serif
+      &:hover
+        text-decoration: none
+    h2
+      text-align center
+      &:after
+        display block
+        margin 25px auto
+        content ''
+        width 165px
+        height 4px
+        background-color: $main-color
+  .section-bottom
+    background-color: #E5E5E5
+    padding 50px 0
+    text-align center
+  &:before
+    content: ''
+    top -6px
+    height: 6px
+    width: 100%
+    background-image url("../img/bah_11.png")
+    position absolute
 
+.section-content
+  min-height 548px
+  background-image: url(../img/s1_gray_bg.png);
+  background-repeat no-repeat
+  background-position center
+  position: relative
+  padding-bottom 98px
+  .s1-bottom-triangle
+    height: 98px
+    width 100%
+    position absolute
+    bottom: 0
+    background-image: url(../img/triangle11.svg)
+    background-repeat: no-repeat
+    background-position: center
+    background-size: cover;
+    //background-position center
 
 //ALWAYS END
 @import "/import/_media.styl";
