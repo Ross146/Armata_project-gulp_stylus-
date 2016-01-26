@@ -31,7 +31,7 @@ body textarea:required:valid
   font-family: RalewayRegular, sans-serif
   position: relative
   .section-head
-    margin-bottom: 80px
+    margin-bottom: 60px
     a
       font-family: RalewayBold, sans-serif
       &:hover
@@ -46,7 +46,7 @@ body textarea:required:valid
         height 4px
         background-color: $main-color
   .section-bottom
-    background-color: #E5E5E5
+    background-color: #2C3949
     padding 50px 0
     text-align center
   &:before
@@ -58,23 +58,63 @@ body textarea:required:valid
     position absolute
 
 .section-content
-  min-height 548px
-  background-image: url(../img/s1_gray_bg.png);
-  background-repeat no-repeat
-  background-position center
   position: relative
   padding-bottom 98px
+  &.section_1
+    background-image: url(../img/s1_gray_bg.png);
+    background-repeat no-repeat
+    background-position bottom
   .s1-bottom-triangle
     height: 98px
     width 100%
-    position absolute
     bottom: 0
-    background-image: url(../img/triangle11.svg)
+    background-image: url(../img/s1_triangle.svg)
     background-repeat: no-repeat
     background-position: center
-    background-size: cover;
-    //background-position center
-
+    background-size: cover
+    position absolute
+    .triangle-logo
+      width: 116px
+      margin-top 30px
+      position absolute
+      left 50%
+      z-index 3
+      transform: translateX(-50%);
+    .scales
+      width 160px
+      position absolute
+      top -130px
+      left 50%
+      transform: translateX(-50%);
+.s1-bottom
+  padding 15px 0 65px
+  background-color: #394b5f
+  .info-item
+    margin 15px 0 0
+    p
+      color white
+      border-color: #546476
+    &.center
+      margin-top: 45px
+  
+.info-item
+  padding-left: 34px
+  max-width: 264px;
+  line-height: 20 * $px_em
+  margin 40px 0
+  &.center
+    margin-top 0
+  h4
+    margin-top: 0
+    margin-bottom: 10px
+    a
+      font-size: 24 * $px_em
+      text-transform: none
+  p
+    font-size: 15 * $px_em
+    border-bottom: #DEE1E5 1px solid
+    padding-bottom: 20px
+      
 //ALWAYS END
 @import "/import/_media.styl";
 

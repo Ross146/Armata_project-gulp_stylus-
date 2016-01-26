@@ -33,13 +33,29 @@
   .header-wrap
     h1
       margin-top: 0
+  .info-item
+    margin 40px 0
+
 
 
 /* Small Devices, Tablets */
 @media only screen and (max-width : 768px)
+  .s1-bottom
+    padding-bottom: 15px
+  .homesect 
+    .section-head
+      margin-bottom: 0
   .main-head
     .main-mnu
       top: 35px
+  .info-item
+    max-width: 100%
+    margin-top: 20px
+    margin-bottom: 20px
+    padding-left 0
+    h4
+      font-size: 13px
+      margin-bottom 0
   /*Disable Animation on Mobile Devices*/
   .animated
     /*CSS transitions*/
@@ -106,3 +122,8 @@
 @media only screen and (min-width : 1200px)
   .main-mnu
     display: block !important
+
+@media only screen and (min-width : 1920px)
+  .section-content
+    .s1-bottom-triangle
+      background-size 100% 100%
