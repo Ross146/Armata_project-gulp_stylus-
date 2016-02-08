@@ -45,6 +45,9 @@ body textarea:required:valid
         width 165px
         height 4px
         background-color: $main-color
+    h3
+      text-align center
+      margin-top: 50px
   .section-bottom
     background-color: #2C3949
     padding 50px 0
@@ -59,15 +62,14 @@ body textarea:required:valid
 
 .section-content
   position: relative
-  padding-bottom 98px
   &.section_1
     background-image: url(../img/s1_gray_bg.png);
     background-repeat no-repeat
-    background-position bottom
+    background-position top
   .s1-bottom-triangle
     height: 98px
     width 100%
-    bottom: 0
+    bottom: 415px
     background-image: url(../img/s1_triangle.svg)
     background-repeat: no-repeat
     background-position: center
@@ -89,6 +91,7 @@ body textarea:required:valid
 .s1-bottom
   padding 15px 0 65px
   background-color: #394b5f
+  margin-top: 50px
   .info-item
     margin 15px 0 0
     p
@@ -114,7 +117,39 @@ body textarea:required:valid
     font-size: 15 * $px_em
     border-bottom: #DEE1E5 1px solid
     padding-bottom: 20px
-      
+    
+.s2-items
+  padding-bottom: 40px
+  .s2-item
+    text-align: center
+    color #111
+    display block
+    margin-bottom: 70px
+    > span
+      display: block
+  .img-wrap
+    display inline-block
+    padding-bottom: 32px
+    margin-bottom: 12px
+    box-shadow: 0 40px 0px -39px $main-color;
+    img
+      max-width: 80px
+      height: 65px
+  .s2-item-text
+    font-family: RalewayBold, sans-serif
+    font-size: 13 * $px_em
+    line-height: 20* $px_em
+.s2-items-wrap
+  text-align: center
+.s2-item-wrap
+  display: inline-block
+  vertical-align: top
+  width: 185px
+  padding 0 15px
+  
+.section_2
+  .section-bottom
+    background-color: #e5e5e5
 //ALWAYS END
 @import "/import/_media.styl";
 
