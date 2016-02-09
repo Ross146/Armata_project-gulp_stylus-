@@ -28,6 +28,11 @@
     .phone
       padding-right: 60px
 
+  .section_3
+    .section-content
+      .img-wrap-folder
+        margin-left 83 px
+
 
 @media only screen and (max-width : 992px)
   .header-wrap
@@ -36,10 +41,38 @@
   .info-item
     margin 40px 0
 
+  .section_3
+    .section-content
+      .img-wrap-folder
+        margin-left 45px
+        margin-top 95px
+      .info-item
+        margin-top 0
+        &.center
+          margin-top: 0
+        &.left-item, &.right-item
+          margin-top 0
+        &.left-top-item, &.left-bottom-item
+          margin-left 0px
+        &.right-top-item, &.right-bottom-item
+          margin-left 0px
+        &.right-item
+          margin-left 0
 
 
 /* Small Devices, Tablets */
 @media only screen and (max-width : 768px)
+
+  .section_3
+    .section-content
+      .info-item
+        padding-left 0
+        max-width: 100%
+        border-bottom: #546476 1px solid
+        &.center-bottom
+          margin-top: 0
+      .img-folder
+        display: none
   .section-content.section_1
     background-position: center
     .s1-bottom
@@ -61,6 +94,10 @@
       h4
         font-size: 13px
         margin-bottom 0
+
+  .section_3
+    .section-content
+      padding-top 0
   /*Disable Animation on Mobile Devices*/
   .animated
     /*CSS transitions*/

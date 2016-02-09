@@ -150,6 +150,52 @@ body textarea:required:valid
 .section_2
   .section-bottom
     background-color: #e5e5e5
+    
+.s_dark
+  background-color: #2c3949;
+  &:before
+    background-image: url(../img/bah_2.png)
+  .section-head
+    h2,p
+      color white
+  .section-bottom
+    background-color: #394b5f
+    
+.section_3
+  .section-content
+    min-height: 850px
+    background-image: url(../img/s3_sun_bg.png)
+    background-position: center
+    background-repeat: no-repeat
+    padding-top 50px
+    .img-wrap-folder
+      width 130px
+      height: 130px
+      background-color: $main-color
+      text-align: center
+      margin 57px 0 0 115px
+      border-radius 10em
+      img
+        width 70px
+        margin-top 29px
+        
+    .info-item
+      p
+        color white
+        border-bottom: none
+      margin-top: 80px
+      &.left-item, &.right-item
+        margin-top 50px
+      &.right-item
+        margin-left 20px
+      &.center
+        margin-top: 30px
+      &.center-bottom
+        margin-top: 160px
+      &.left-top-item, &.left-bottom-item
+        margin-left 82px
+      &.right-top-item, &.right-bottom-item
+        margin-left -30px
 //ALWAYS END
 @import "/import/_media.styl";
 
