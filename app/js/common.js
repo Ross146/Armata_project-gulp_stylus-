@@ -1,9 +1,49 @@
+
+
+
 $(function() {
 	$('.toggle-mnu').click(function () {
 		$(this).toggleClass('on');
 		$('.main-mnu').slideToggle();
 	});
 
+	$(".cards .card").equalHeights();
+
+	$(".section_4").waypoint(function () {
+		$(".section_4 .card").each( function (i) {
+			var that = $(this)
+			setTimeout(function() {
+				that.removeClass("card-off")
+			}, 150*i)
+		})
+	});
+
+
+	$(".section_5").waypoint(function () {
+		$(".section_5 .tc-item").each(function (i) {
+			executed = true;
+			setTimeout(function () {
+				var myAnimation = new DrawFillSVG({
+					elementId: "tc-svg" + i
+				});
+			}, 800 * i)
+		});
+		this.destroy()
+	});
+
+	$(".slider").owlCarousel({
+		items: 1,
+		nav: true,
+		navText: '',
+		loop: true,
+		autoplay: true,
+		autoplayHoverPause: true,
+		fluidSpeed:600 ,
+		autoplaySpeed:600 ,
+		navSpeed:600 ,
+		dotsSpeed:600 ,
+		dragEndSpeed:600
+	});
 
 
 	//SVG Fallback
@@ -44,3 +84,4 @@ $(function() {
 	$("img, a").on("dragstart", function(event) { event.preventDefault(); });
 
 });
+

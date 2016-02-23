@@ -1,5 +1,7 @@
 @import "nib";
 @import "/import/_var.styl";
+@import "/import/magnific-popup.styl";
+@import "/import/owlcarousel.styl";
 
 *::-webkit-input-placeholder
   color: #fff
@@ -24,7 +26,7 @@ body input:required:valid,
 body textarea:required:valid
   color: #fff
 
-//Custom Styles Here
+//Custom Styles
 .homesect
   padding-top: 70px
   background-color: #f9f9f9
@@ -48,6 +50,8 @@ body textarea:required:valid
     h3
       text-align center
       margin-top: 50px
+    p
+      text-align: center
   .section-bottom
     background-color: #2C3949
     padding 50px 0
@@ -87,7 +91,7 @@ body textarea:required:valid
       position absolute
       top -130px
       left 50%
-      transform: translateX(-50%);
+      transform: translateX(-50%)
 .s1-bottom
   padding 15px 0 65px
   background-color: #394b5f
@@ -196,6 +200,204 @@ body textarea:required:valid
         margin-left 82px
       &.right-top-item, &.right-bottom-item
         margin-left -30px
+        
+.s_gray
+  background-color: #e5e5e5
+  &:before
+    background-image: url(../img/bah_3.png)
+  .section-bottom
+    background-color: #d6d6d6
+  h3
+    color #394b5f
+
+.section-pb
+  padding-bottom 70px
+
+.cards
+  text-align: center
+  perspective 600px
+  .card
+    width 260px
+    display: inline-block
+    background-color: #2c3949
+    margin 5px 12px
+    color: #97a4b2
+    font-size: 14 * $px_em
+    line-height: 22 * $px_em
+    padding 54px 28px 48px
+    vertical-align top
+    transition all 1s ease
+    opacity 1
+    border-bottom: 4px solid #162849;
+    &-off
+      transform rotateY(100deg)
+      opacity 0
+    .card-icon
+      width: 120px
+      height: 120px
+      background-color: $main-color;
+      border-radius 10em
+      display: inline-block
+      line-height 120px
+      img
+        width: 75px
+    h4
+      color: #e5e5e5
+      font-family: RalewayBold, sans-serif
+      text-transform: uppercase
+      font-size: 18 *$px_em
+      margin-top:30px
+      margin-bottom: 18px
+    p
+      margin: 0
+      strong
+        color: $main-color
+
+.triangles-container
+  color white
+  font-family: PFCentroSlabProMedium, sans-serif
+  font-size: 19 * $px_em
+  margin 0px 0 70px
+  text-align: center
+  .tc-item
+    width: 290px
+    height: 128px
+    display inline-block
+    position relative
+    margin-left -45px
+    vertical-align top
+    transition  all .5s ease
+    &:first-child
+      margin-left 0
+      .tc-content
+        margin-left: 40px
+    &:hover
+      transform: scale(1.1)
+      path
+        fill-opacity 0 !important
+        stroke-opacity 1 !important
+    svg
+      position absolute
+      top 0
+      left 0
+      z-index 0
+    .tc-content
+      position relative
+      z-index: 1
+      margin-top: 43px
+      margin-left 55px
+      text-align left
+      padding-right 20px
+      span
+        font-size: 20 * $px_em;
+        display: inline-block;
+        float left
+        height 30px
+        padding-right 5px
+      img
+        height: 38px
+        float left
+        margin-right: 15px
+
+.teams
+  @extend .cards
+  .team
+    @extend .cards .card
+    background-color: #e5e5e5
+    border-color #d6d6d6
+    .card-icon
+      background-color: #d6d6d6
+      box-shadow 0 0 0 5px #d6d6d6
+      line-height 0
+      overflow hidden
+      img
+        width 100%
+    h4
+      color: #333333
+      text-transform none;
+      margin-bottom: 5px
+    p
+      color: #6e7b8b
+    .team-phone
+      margin-top 20px
+      font-family: RobotoBold, sans-serif
+      color: #333333;
+      font-size: 18 *$px_em
+      
+.slider
+  margin-bottom: 10px
+  .slide
+    text-align: center
+    margin-bottom: 20px
+    position relative
+  .owl-item
+    .img-wrap, .slide-descr, h3, p
+      opacity 0
+      transition all .5s ease
+      transform translate3d(150px,0,0)
+      transition-delay .1s
+    .slide-descr, h3
+      transition-delay .4s
+    p
+      transition-delay .6s
+    &.active
+      .img-wrap, .slide-descr, h3, p
+        opacity 1
+        transform translate3d(0,0,0)
+    .img-wrap
+      width: 116px;
+      height: 116px;
+      display: inline-block
+      border-radius 10em;
+      overflow: hidden
+      box-shadow: 0 0 0 7px $main-color
+      margin-top 7px
+      img
+        width 100%
+        transform-style flat
+    h3
+      text-transform: none
+      margin-bottom: 0
+      font-size: 24 *$px_em
+    .slide-descr
+      margin-top: 10px
+      font-size: 14 * $px_em
+      color #6e7b8b
+  .owl-controls
+    text-align center
+    .owl-dot
+      width: 15px
+      height: 15px
+      background-color: #ccc
+      display inline-block
+      border-radius 15px
+      margin:0 5px
+      &.active
+        background-color: $main-color
+    .owl-nav
+      div
+        height 29px
+        width 16px
+        background-image: url(../img/slider_arrows.png)
+        display inline-block
+        position absolute
+        top 13%
+        left 20px
+        opacity .4
+        transition all .25s ease
+        &:hover
+          opacity 1
+        &:last-child
+          right 20px
+          left auto
+          background-position: -16px 0;
+          
+.section-8
+  .section-head
+    h2, h2:after, p
+      text-align: left
+    h2:after
+      margin 25px 0
 //ALWAYS END
 @import "/import/_media.styl";
 
