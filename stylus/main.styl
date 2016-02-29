@@ -3,28 +3,8 @@
 @import "/import/magnific-popup.styl";
 @import "/import/owlcarousel.styl";
 
-*::-webkit-input-placeholder
-  color: #fff
-  opacity: 1
 
-*:-moz-placeholder
-  color: #fff
-  opacity: 1
 
-*::-moz-placeholder
-  color: #fff
-  opacity: 1
-
-*:-ms-input-placeholder
-  color: #fff
-  opacity: 1
-
-body input:focus:required:invalid,
-body textarea:focus:required:invalid
-  color: #fff
-body input:required:valid,
-body textarea:required:valid
-  color: #fff
 
 //Custom Styles
 .homesect
@@ -393,11 +373,55 @@ body textarea:required:valid
           background-position: -16px 0;
           
 .section-8
+  padding-top 80px
+  .forms
+    background-color: #DDDDDD
+    border-color: #828282
+    h4
+     color #2c3949
+    p
+      color #5e6267
+    input, input:focus
+      background-color: #C0C0C0
+      color #333
   .section-head
+    h2
+      margin-top 0
     h2, h2:after, p
       text-align: left
     h2:after
       margin 25px 0
+
+.s8-items
+  margin-bottom 20px
+  .s8-item
+    text-align center
+    .img-wrap
+      height: 72px
+      img
+        height 100%
+    p
+      font-family: RalewayBold, sans-serif
+      font-size: 13 * $px_em
+      line-height 19 * $px_em
+      margin-bottom 10px
+
+footer
+  min-height auto
+  padding-bottom 70px
+  .logo
+    opacity .35
+  .phone-wrap
+    .phone
+      opacity .35
+  .main-mnu
+    a
+      color #c7c9cc
+  &:before
+    background-color: transparent
+    opacity 1
+
+
 //ALWAYS END
 @import "/import/_media.styl";
 

@@ -2,9 +2,17 @@
 
 
 $(function() {
-	$('.toggle-mnu').click(function () {
+	$('header .toggle-mnu').click(function (e) {
+		e.preventDefault();
 		$(this).toggleClass('on');
-		$('.main-mnu').slideToggle();
+		$('header .main-mnu').slideToggle();
+	});
+
+	$('footer .toggle-mnu').click(function (e) {
+		e.preventDefault();
+		$("html, body").animate({scrollTop: $(document).height()}, "slow");
+		$(this).toggleClass('on');
+		$('footer .main-mnu').slideToggle();
 	});
 
 	$(".cards .card").equalHeights();
