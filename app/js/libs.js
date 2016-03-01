@@ -33,7 +33,7 @@ https://github.com/imakewebthings/waypoints/blog/master/licenses.txt
 					ths.addClass(inEffect).css("opacity", "1");
 				};
 			}, {
-				offset: "90%"
+				offset: "bottom-in-view"
 			});
 
 		});

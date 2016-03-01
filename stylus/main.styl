@@ -32,6 +32,7 @@
       margin-top: 50px
     p
       text-align: center
+      animation-delay .3s
   .section-bottom
     background-color: #2C3949
     padding 50px 0
@@ -130,7 +131,12 @@
   vertical-align: top
   width: 185px
   padding 0 15px
-  
+  opacity 0
+  transition all .5s ease
+  transform translateY(-20px)
+  &.on
+    opacity 1
+    transform translateY(0)
 .section_2
   .section-bottom
     background-color: #e5e5e5
@@ -372,7 +378,7 @@
           left auto
           background-position: -16px 0;
           
-.section-8
+.section_8
   padding-top 80px
   .forms
     background-color: #DDDDDD
@@ -396,6 +402,12 @@
   margin-bottom 20px
   .s8-item
     text-align center
+    transition all .5s ease
+    transform translateY(-20px)
+    opacity  0
+    &.on
+      opacity 1
+      transform translateY(0)
     .img-wrap
       height: 72px
       img
@@ -420,6 +432,47 @@ footer
   &:before
     background-color: transparent
     opacity 1
+    
+.top
+  width 100%
+  height 36px
+  background-color: #1f2B3A
+  background-image: url(../img/top.png);
+  background-repeat: no-repeat;
+  background-position: center
+  cursor pointer
+
+#callback
+  h4
+    line-height 18 * $px_em
+    margin-bottom 18px
+  max-width 300px
+  margin auto
+  position relative
+
+
+.mfp-forms
+  .forms
+    background-color: rgba(36,51,67,1)
+  .mfp-close
+    color: #ffffff
+  &.mfp-bg
+    opacity: 0
+    transition: all 0.25s ease-out
+    &.mfp-ready
+      opacity: 0.8
+    &.mfp-removing
+      opacity: 0
+  &.mfp-wrap
+    .mfp-content
+      opacity: 0
+      transition: all 0.25s ease-out
+    &.mfp-ready
+      .mfp-content
+        opacity: 1
+    &.mfp-removing
+      .mfp-content
+        opacity: 0
 
 
 //ALWAYS END

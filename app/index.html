@@ -31,6 +31,7 @@
 	<script>loadLocalStorageCSS( "webfonts", "/css/fonts.css?ver=1.0.0" );</script>
 	<script>loadCSS( "/css/header.css?ver=1.0.0", false, "all" );</script>
 	<script>loadCSS( "/css/main.css?ver=1.0.0", false, "all" );</script>
+	<script>loadCSS( "/css/animate.min.css?ver=1.0.0", false, "all" );</script>
 	<!-- Load CSS End -->
 
 	<!-- Load CSS Compilled without JS -->
@@ -38,6 +39,7 @@
 		<link rel="stylesheet" href="css/fonts.css">
 		<link rel="stylesheet" href="css/main.css">
 		<link rel="stylesheet" href="css/header.css">
+		<link rel="stylesheet" href="css/animate.min.css">
 	</noscript>
 
 </head>
@@ -102,6 +104,7 @@
 						<div class="button-wrap">
 							<button class="buttons">Отправить</button>
 						</div>
+						<input type="hidden" name="formname" value="Заявка с нижней формы"/>
 					</form>
 				</div>
 			</div>
@@ -206,7 +209,7 @@
 
 		</div>
 		<div class="section-bottom">
-			<a href="#" class="buttons">Заказать оценку</a>
+			<a href="#callback" class="buttons">Заказать оценку</a>
 		</div>
 	</div>
 
@@ -311,7 +314,7 @@
 		</div>
 	</div>
 	<div class="section-bottom">
-		<a href="#" class="buttons">Заказать Сопровождение</a>
+		<a href="#callback" class="buttons">Заказать Сопровождение</a>
 	</div>
 </section>
 
@@ -409,7 +412,7 @@
 
 	</div>
 	<div class="section-bottom">
-		<a href="#" class="buttons">Заказать бухгалтерские услуги</a>
+		<a href="#callback" class="buttons">Заказать бухгалтерские услуги</a>
 	</div>
 </section>
 
@@ -455,7 +458,7 @@
 		</div>
 	</div>
 	<div class="section-bottom">
-		<a href="#" class="buttons">Обратиться к нам</a>
+		<a href="#callback" class="buttons">Обратиться к нам</a>
 	</div>
 </section>
 
@@ -515,7 +518,7 @@
 		</div>
 	</div>
 	<div class="section-bottom">
-		<a href="#" class="buttons">Оставить заявку</a>
+		<a href="#callback" class="buttons">Оставить заявку</a>
 	</div>
 </section>
 <section class="homesect section_6">
@@ -625,11 +628,11 @@
 		</div>
 	</div>
 </section>
-<section class="homesect section-8">
+<section class="homesect section_8">
 
 	<div class="container">
 		<div class="section-pb">
-			<div class="row">
+			<div class="rows">
 				<div class="col-md-8">
 					<div class="section-head">
 						<h2>Мы - профессионалы!</h2>
@@ -679,6 +682,7 @@
 						<div class="button-wrap">
 							<button class="buttons">Отправить</button>
 						</div>
+						<input type="hidden" name="formname" value="Заявка с нижней формы"/>
 					</form>
 				</div>
 			</div>
@@ -717,12 +721,30 @@
 		</div>
 	</div>
 </footer>
+<div class="top" title="To top"></div>
 
 
 
 
 
-<div class="hidden"></div>
+<div class="hidden">
+	<form class="forms" id="callback">
+		<h4>Заявка:</h4>
+		<p>Оставьте заявку и мы свяжемся с вами в течении 15 минут в рабочее время с 10:00 до 18:00 с пн-пт</p>
+		<label>
+			<span>Ваше имя:</span>
+			<input type="text" name="name" required/>
+		</label>
+		<label>
+			<span>Ваш телефон:</span>
+			<input type="text" name="phone" required/>
+		</label>
+		<div class="button-wrap">
+			<button class="buttons">Отправить</button>
+		</div>
+		<input type="hidden" name="formname" value=""/>
+	</form>
+</div>
 
 <!--[if lt IE 9]>
 <script src="libs/html5shiv/es5-shim.min.js"></script>

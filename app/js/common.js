@@ -15,6 +15,21 @@ $(function() {
 		$('footer .main-mnu').slideToggle();
 	});
 
+	$('.arrow-bottom').click(function (e) {
+		e.preventDefault();
+		$("html, body").animate({scrollTop: $("header").innerHeight()+20}, "slow");
+	});
+
+
+	$('.top').click(function (e) {
+		e.preventDefault();
+		$("html, body").animate({scrollTop: 0}, "fast");
+	});
+
+
+
+
+
 	$(".cards .card").equalHeights();
 
 	$(".section_4").waypoint(function () {
@@ -29,7 +44,6 @@ $(function() {
 
 	$(".section_5").waypoint(function () {
 		$(".section_5 .tc-item").each(function (i) {
-			executed = true;
 			setTimeout(function () {
 				var myAnimation = new DrawFillSVG({
 					elementId: "tc-svg" + i
@@ -54,6 +68,46 @@ $(function() {
 	});
 
 
+	$(".section-head h2, .section-head p").animated("fadeInRight");
+
+	$(".info-item").animated("zoomIn");
+
+	$(".slider .slide").animated("rollIn");
+
+	$(".forms").animated("fadeInRight");
+
+	$(".section_2").waypoint(function () {
+		$(".s2-item-wrap").each(function (i) {
+			var that = $(this);
+			setTimeout(function () {
+				that.addClass("on");
+			}, 200 * i)
+		});
+		this.destroy()
+	});
+
+	$(".section_8").waypoint(function () {
+		$(".s8-item").each(function (i) {
+			var that = $(this);
+			setTimeout(function () {
+				that.addClass("on");
+			}, 200 * i)
+		});
+		this.destroy()
+	},
+			{offset: "50%"});
+
+	$(".section-bottom .buttons").click(function(e){
+		e.preventDefault();
+		$("#callback h4").html($(this).text());
+		$("#callback input[name=formname]").value($(this).text());
+	}).magnificPopup({
+		type:"inline",
+		mainClass: "mfp-forms"
+
+	});
+
+
 	//SVG Fallback
 	if(!Modernizr.svg) {
 		$("img[src*='svg']").attr("src", function() {
@@ -63,7 +117,7 @@ $(function() {
 
 	//E-mail Ajax Send
 	//Documentation & Example: https://github.com/agragregra/uniMail
-	$("form").submit(function() { //Change
+	$(".forms").submit(function() { //Change
 		var th = $(this);
 		$.ajax({
 			type: "POST",
